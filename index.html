@@ -66,6 +66,31 @@
     </div>
   </section>
 
+  <!-- Calculator Section -->
+  <section data-aos="fade-up" id="calc">
+    <div class="container">
+      <h2>Быстрый расчёт стоимости</h2>
+      <form id="freight-calc-form" class="calc-form" style="max-width:600px;margin:auto">
+        <div style="display:flex;gap:1rem;flex-wrap:wrap">
+          <label style="flex:1 1 140px">Тип&nbsp;перевозки
+            <select name="type" required style="width:100%">
+              <option value="FTL">Отдельная машина (FTL)</option>
+              <option value="LTL">Сборный груз (LTL)</option>
+            </select>
+          </label>
+          <label style="flex:1 1 120px">Дистанция, км
+            <input type="number" name="distance" min="1" required placeholder="например 550" style="width:100%">
+          </label>
+          <label style="flex:1 1 120px" id="weight-label">Вес, кг (для LTL)
+            <input type="number" name="weight" min="1" placeholder="500" style="width:100%">
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top:1rem">Рассчитать</button>
+      </form>
+      <p id="freight-calc-result" style="margin-top:1rem;font-weight:500"></p>
+    </div>
+  </section>
+
   <!-- Services Snapshot -->
   <section>
     <div class="container">
@@ -152,6 +177,7 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/calc.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init({ once:true, duration:600 });</script>
 </body>
