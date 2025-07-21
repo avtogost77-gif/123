@@ -302,3 +302,20 @@ footer a:hover {
   margin-bottom: .5rem;
   display:block;
 }
+
+/* Sticky bar */
+.sticky-bar{position:fixed;top:0;left:0;width:100%;background:var(--color-primary-dark);color:#fff;font-size:.875rem;display:flex;justify-content:center;align-items:center;gap:1rem;padding:.5rem 1rem;z-index:1000;transition:transform .3s ease;}
+.sticky-bar.hide{transform:translateY(-100%);} 
+.sticky-bar .btn{font-size:.75rem;padding:.35rem .8rem;}
+
+/* Benefit slider */
+#benefit-range{width:100%;margin:1rem 0;}
+#benefit-output{font-size:1.25rem;font-weight:600;}
+
+/* Live ticker */
+.live-ticker{background:var(--color-bg);overflow:hidden;white-space:nowrap;font-size:.875rem;color:var(--color-text);padding:.5rem 0;}
+.live-ticker span{display:inline-block;padding-left:100%;animation:ticker 30s linear infinite;}
+@keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
+
+/* Button hover shadow */
+.btn:hover{box-shadow:0 4px 8px rgba(0,0,0,.15);}
