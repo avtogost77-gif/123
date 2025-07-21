@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.remotelogistics.ru/sitemap.xml
+Host: avtogost77.ru
+Sitemap: https://avtogost77.ru/sitemap.xml
