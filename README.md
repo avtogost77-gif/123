@@ -1,6 +1,6 @@
-# RemoteLogistics Static Website
+# Авто Гост — статический сайт
 
-This repository contains the static front-end for **RemoteLogistics** — a remote logistics department service for SMBs across Russia.
+This repository contains the static front-end for **Авто Гост** — транспортно-логистического партнёра по России.
 
 ## Structure
 
