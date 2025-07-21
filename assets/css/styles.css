@@ -104,13 +104,15 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
+  gap:1rem;
 }
 
 .navbar-brand {
-  font-size: 1.25rem;
+  font-size: 1.6rem; /* bigger logo */
   font-weight: 700;
   color: var(--color-primary);
   text-decoration: none;
+  font-family: "Segoe UI",Helvetica,Arial,sans-serif;
 }
 
 .navbar-menu {
@@ -135,6 +137,15 @@ header {
   color: var(--color-primary);
 }
 
+/* social icons in header */
+.navbar-social a {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  margin-left: 1rem;
+  transition: color 0.2s;
+}
+.navbar-social a:hover { color: var(--color-primary-light); }
+
 /* Dropdown */
 .dropdown {
   position: absolute;
@@ -145,7 +156,7 @@ header {
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   display: none;
-  min-width: 200px;
+  min-width: 220px; /* fix long titles */
   padding: 0.5rem 0;
 }
 
@@ -153,6 +164,7 @@ header {
   display: block;
   padding: 0.5rem 1rem;
   color: var(--color-text);
+  white-space: normal; /* allow wrap */
 }
 
 .dropdown a:hover {
