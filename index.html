@@ -14,6 +14,11 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
 </head>
 <body>
+  <!-- Sticky Guarantee Bar -->
+  <div class="sticky-bar">
+    <span>Гарантия: подача авто ≤ 2 ч или скидка 10 %</span>
+    <a href="#calc" class="btn btn-outline btn-sm">Оставить заявку</a>
+  </div>
   <!-- Header -->
   <header>
     <div class="container navbar">
@@ -145,7 +150,8 @@
       <a href="contact.html" class="btn btn-primary">Оставить заявку</a>
     </div>
   </section>
-
+  <!-- Live ticker -->
+  <div class="live-ticker"><span></span></div>
   <!-- Footer -->
   <footer>
     <div class="container footer-grid">
@@ -177,6 +183,9 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/benefit.js"></script>
+  <script src="assets/js/ticker.js"></script>
+  <script src="assets/js/sticky-bar.js"></script>
   <script src="assets/js/calc.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init({ once:true, duration:600 });</script>
