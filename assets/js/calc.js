@@ -36,5 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     resultEl.innerHTML = `Ориентировочная стоимость: <strong>${formatted}</strong><br/><small>* Цена не является публичной офертой</small>`;
+
+    // send lead to Telegram
+    const message = `📦 Новая заявка с сайта\nТип: ${type}\nДистанция: ${distance} км${type === "LTL" ? `\nВес: ${weight} кг` : ""}\nЦена (черновая): ${formatted}`;
+    fetch(`https://api.telegram.org/bot7999458907:AAHAnyTyvfteW1WNKpns8w35jl14f0wn5es/sendMessage`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ chat_id: 399711406, text: message })
+    }).catch(() => {/* ignore errors */});
   });
 });
