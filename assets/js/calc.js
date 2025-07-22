@@ -44,5 +44,35 @@ document.addEventListener("DOMContentLoaded", () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ chat_id: 399711406, text: message })
     }).catch(() => {/* ignore errors */});
+
+    // open modal and prefill details
+    const modal=document.getElementById('lead-modal');
+    document.getElementById('lead-details').value=`${type}, ${distance} км, ${type==='LTL'?weight+' кг, ':''}ориент. ${formatted}`;
+    modal.classList.add('open');
   });
+});
+
+// lead form submission
+document.addEventListener('DOMContentLoaded',()=>{
+ const leadForm=document.getElementById('lead-form');
+ if(!leadForm) return;
+ leadForm.addEventListener('submit',e=>{
+   e.preventDefault();
+   const fd=new FormData(leadForm);
+   const name=fd.get('name');
+   const phone=fd.get('phone');
+   const email=fd.get('email');
+   const details=fd.get('details');
+   const text=`📞 Лид с калькулятора\nИмя: ${name}\nТел: ${phone}\nEmail: ${email}\n${details}`;
+   fetch(`https://api.telegram.org/bot7999458907:AAHAnyTyvfteW1WNKpns8w35jl14f0wn5es/sendMessage`,{
+     method:'POST',headers:{'Content-Type':'application/json'},
+     body:JSON.stringify({chat_id:399711406,text})
+   });
+   leadForm.innerHTML='<p>Спасибо! Мы свяжемся в ближайшее время.</p>';
+ });
+
+ // close modal on overlay click
+ document.getElementById('lead-modal').addEventListener('click',e=>{
+   if(e.target.classList.contains('modal-overlay')){e.currentTarget.classList.remove('open');}
+ });
 });
