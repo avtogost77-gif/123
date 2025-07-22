@@ -335,3 +335,4 @@ h2{letter-spacing:.3px;}
 
 /* Button hover shadow */
 .btn:hover{box-shadow:0 4px 8px rgba(0,0,0,.15);}
+.navbar-social{display:flex;flex-direction:column;gap:.25rem;}
