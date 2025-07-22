@@ -221,7 +221,7 @@ header {
 /* Hero */
 .hero {
   /* Background: responsive image + semi-transparent brand gradient overlay */
-  background: linear-gradient(135deg, rgba(32, 92, 181, 0.8) 0%, rgba(89, 149, 230, 0.8) 100%),
+  background: linear-gradient(135deg, rgba(32, 92, 181, 0.55) 0%, rgba(89, 149, 230, 0.55) 100%),
               url("../img/hero.webp") center/cover no-repeat;
   color: #fff;
   padding: 6rem 0;
